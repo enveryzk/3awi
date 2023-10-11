@@ -4,23 +4,23 @@ import java.util.Random;
 import java.util.Scanner;
 public class ControlStructursWürfel {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        Random random = new Random();
+        Scanner scanner = new Scanner(System.in); //Scanner erstellen
+        Random random = new Random(); //Random um zufällige Zahlen zu bekommen
 
         System.out.println("Würfelspiel");
         System.out.println("Drücke Enter zum spielen");
-        scanner.nextLine();
+        scanner.nextLine(); //Nach einer Eingabe scannen
 
         int summeSpieler = 0;
         int summeComputer = 0;
 
-        for (int nummerwurf = 1; nummerwurf <= 6; nummerwurf++){
-            System.out.println("Wurf Nr. " + nummerwurf + " -- Um zu würfeln drücke Enter");
-            scanner.nextLine();
+        for (int nummerwurf = 1; nummerwurf <= 6; nummerwurf++){ //For - Schleife für die 6 mal Würfeln
+            System.out.println("Wurf Nr. " + nummerwurf + " -- Um zu würfeln drücke Enter"); //Wurf Nr wird jedes mal beim durchlaufen erhöht
+            scanner.nextLine(); //Nach einer Eingabe scannen
 
-            int wurfspieler = random.nextInt(6) + 1;
+            int wurfspieler = random.nextInt(6) + 1; //Alle Zahlen von 0-5 und wir brauchen noch +1 da der würfel 6 Zahlen hat
             System.out.println("Du hast eine " + wurfspieler + " gewürfelt!");
-            summeSpieler += wurfspieler;
+            summeSpieler += wurfspieler; //Bei jedem durchlauf addieren
 
             int wurfcompi = random.nextInt(6) + 1;
             System.out.println("Der Compi hat eine " + wurfcompi + " gewürfelt");
