@@ -14,8 +14,6 @@ public class ControlStructursBankomat {
         System.out.println("2. Abheben");
         System.out.println("3. Kontostand");
         System.out.println("4. Ende");
-        // jblalba
-    //
 
 
         while (true) { // Schleife bis sie mit 4. Beendet wird
@@ -26,15 +24,38 @@ public class ControlStructursBankomat {
                 case 1:
                     System.out.println("Geben Sie einen Betrag für die Einzahlung ein: ");
                     double einzahlung = scanner.nextDouble(); //Einzahlung einlesen
-                    if (einzahlung > 0){ //Einzahlung darf nicht unter 0 sein
+                    if (einzahlung > 0) { //Einzahlung darf nicht unter 0 sein
                         kontostand += einzahlung; //Einzahlung auf Kontostand addieren
                         System.out.println("Einzahlung in höhe von " + einzahlung + " war erfolgreich"); //Erfolgreich
                     } else {
                         System.out.println("Ungültiger Betrag für die Einzahlung");
                     }
                     break;
-                case 2:
 
+                case 2:
+                    System.out.println("Geben Sie den Betrag für die Abhebung ein");
+                    double abhebung = scanner.nextDouble(); //Abhebung einlesen
+                    if (abhebung > 0 && abhebung <= kontostand) { //Abhebung darf nicht kleiner als 0 sein && Kontostand muss größer sein als abhebung
+                        kontostand -= abhebung;
+                        System.out.println("Abhebung von " + abhebung + " war erfolgreich");
+                    } else if (abhebung <= 0) {
+                        System.out.println("Ungültiger Betrag für Abhebung");
+                    } else if (kontostand <= abhebung) {
+                        System.out.println("Nicht ausreichendes Guthaben");
+                    }
+                    break;
+
+                case 3:
+                    System.out.println("Ihr Aktueller Kontostand beträgt " + kontostand + " EUR");
+                    break;
+
+                case 4:
+                    System.out.println("Programm wird beendet");
+                    scanner.close();
+                    return;
+
+                default:
+                    System.out.println("Ungültige option. Bitte wählen sie eine zwischen 1-4");
             }
         }
     }
