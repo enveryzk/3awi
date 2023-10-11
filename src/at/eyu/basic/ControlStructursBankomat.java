@@ -15,7 +15,7 @@ public class ControlStructursBankomat {
         System.out.println("3. Kontostand");
         System.out.println("4. Ende");
         // jblalba
-
+    //
 
 
         while (true) { // Schleife bis sie mit 4. Beendet wird
