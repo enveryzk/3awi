@@ -39,7 +39,7 @@ public class ControlStructursWürfel {
         if (summeSpieler > summeComputer) {
             System.out.println("Herzlichen Glückwunsch! Du hast gewonnen!");
         } else if (summeSpieler < summeComputer) {
-            System.out.println("Der Computer hat gewonnen. Besser Glück nächstes Mal!");
+            System.out.println("Der Computer hat gewonnen. Get better!");
         } else {
             System.out.println("Das Spiel endet unentschieden. Gleichstand!");
         }
