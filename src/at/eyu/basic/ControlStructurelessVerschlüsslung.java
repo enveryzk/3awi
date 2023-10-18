@@ -44,8 +44,15 @@ public class ControlStructurelessVerschlüsslung {
         char[] inputData = stringToEncrypt.toCharArray();
 
         for (int i = 0; i < inputData.length; i++) {
-            int letter = inputData[i] + shift; //Jeden Buchstaben um den Eingabewert nach vorne verschieben
-            encryptedString += Character.toString((char) letter); //Hier wird encrypted string mit den neuen Buchstaben zusammengesetzt
+            char currentChar = inputData[i];
+            if (Character.isLetter(currentChar)) {
+                char base = Character.isLowerCase(currentChar) ? 'a' : 'A';
+                char encryptedChar = (char) (base + (currentChar - base + shift) % 26); //%26 damit es innerhalb 26 buchstaben bleibt
+                encryptedString += encryptedChar;
+            } else {
+                // Wenn es kein Buchstabe ist (z.B. Leerzeichen), füge es unverändert hinzu.
+                encryptedString += currentChar;
+            }
         }
 
         return encryptedString;
@@ -56,8 +63,15 @@ public class ControlStructurelessVerschlüsslung {
         char[] inputData = stringToDecrypt.toCharArray();
 
         for (int i = 0; i < inputData.length; i++) {
-            int letter = inputData[i] - shift; //Jeden Buchstaben um den Eingabewert nach hinten verschieben
-            decryptedString += Character.toString((char) letter);
+            char currentChar = inputData[i];
+            if (Character.isLetter(currentChar)) { // Überprüfen ob Buchstabe
+                char base = Character.isLowerCase(currentChar) ? 'a' : 'A'; //Bestimmt ob groß oder klein schreibung
+                char decryptedChar = (char) (base + (currentChar - base - shift + 26) % 26); //%26 damit es innerhalb 26 buchstaben bleibt
+                decryptedString += decryptedChar;
+            } else {
+                // Wenn es kein Buchstabe ist (z.B. Leerzeichen), füge es unverändert hinzu.
+                decryptedString += currentChar;
+            }
         }
 
         return decryptedString;
