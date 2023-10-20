@@ -20,6 +20,7 @@ public class TicTacToeSpiel {
                 board[row][col] == currentPlayer;
                 gameWon = checkWin(board, currentPlayer, row, col);
                 currentPlayer = (currentPlayer == 'X')? '0' : 'X';
+                moves
 
 
             }
