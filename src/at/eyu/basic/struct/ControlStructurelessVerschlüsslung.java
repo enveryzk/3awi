@@ -1,4 +1,4 @@
-package at.eyu.basic;
+package at.eyu.basic.struct;
 
 import java.util.Scanner;
 
