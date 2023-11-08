@@ -11,7 +11,7 @@ public class TestIT {
 
         Flasche flasche1 = new Flasche("voüs", 330, "cola");
         //System.out.println(auto.getKofferraumGetraenkekiste().getFlasche().getHersteller());
-        //auto.getKofferraumGetraenkekiste().setFlasche(flasche1);
+
 
         auto.setiLeistung(300);
         auto.setsFarbe("rot");
