@@ -1,4 +1,4 @@
-package at.eyu.basic.oop;
+package at.eyu.basic.oop.bsp;
 
 public class Getraenkekiste {
 

@@ -1,4 +1,4 @@
-package at.eyu.basic.oop;
+package at.eyu.basic.oop.bsp;
 
 import java.util.ArrayList;
 
