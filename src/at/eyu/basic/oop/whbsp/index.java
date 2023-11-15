@@ -21,5 +21,12 @@ public class index {
 
         System.out.println(c2.brand);
         System.out.println(c2.color);
+
+        c2.Turboboost();
+
+        c1.breakMethod();
+
+        c2.honk(3);
+
     }
 }
