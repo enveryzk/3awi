@@ -2,19 +2,16 @@ package at.eyu.basic.oop.whbsp;
 
 public class car {
 
-    public int fuelComsumption;
-
-    public String brand;
-
-    public String serialnumber;
-
-    public String color;
+    private int fuelComsumption;
+    private String brand;
+    private String serialnumber;
+    private String color;
 
     private double tankstand;
     private double tankvolumen;
     private double verbrauch;
 
-    //Konstruktor dient dazu Objekte zu Initialisieren. Wird nur am Anfang einer Classe aufgerufen.
+    // Konstruktor dient dazu Objekte zu Initialisieren. Wird nur am Anfang einer Klasse aufgerufen.
     public car(double tankstand, double tankvolumen, double verbrauch) {
         this.tankstand = tankstand;
         this.tankvolumen = tankvolumen;
@@ -24,15 +21,14 @@ public class car {
     public car() {
     }
 
-    //Methode zum Bremsen
+    // Methoden zum Bremsen
     public void breakMethod() {
         System.out.println("Ich bremse");
     }
 
-    //Methode für Turboboost
-
+    // Methoden für Turboboost
     public void Turboboost() {
-        double minFuelForBoost = 0.1 * tankvolumen; //Mindestbestand tankvolumen für boost
+        double minFuelForBoost = 0.1 * tankvolumen; // Mindestbestand tankvolumen für boost
 
         if (tankstand < minFuelForBoost) {
             System.out.println("SuperBoost");
@@ -41,10 +37,65 @@ public class car {
         }
     }
 
-    public void honk(int amountOfRepetiotions) {
-        for (int i = 0; i < amountOfRepetiotions; i++) {
+    public void honk(int amountOfRepetitions) {
+        for (int i = 0; i < amountOfRepetitions; i++) {
             System.out.println("Tuuut");
         }
     }
-}
 
+    public int getFuelComsumption() {
+        return fuelComsumption;
+    }
+
+    public void setFuelComsumption(int fuelComsumption) {
+        this.fuelComsumption = fuelComsumption;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getSerialnumber() {
+        return serialnumber;
+    }
+
+    public void setSerialnumber(String serialnumber) {
+        this.serialnumber = serialnumber;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public double getTankstand() {
+        return tankstand;
+    }
+
+    public void setTankstand(double tankstand) {
+        this.tankstand = tankstand;
+    }
+
+    public double getTankvolumen() {
+        return tankvolumen;
+    }
+
+    public void setTankvolumen(double tankvolumen) {
+        this.tankvolumen = tankvolumen;
+    }
+
+    public double getVerbrauch() {
+        return verbrauch;
+    }
+
+    public void setVerbrauch(double verbrauch) {
+        this.verbrauch = verbrauch;
+    }
+}
