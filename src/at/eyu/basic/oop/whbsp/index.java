@@ -1,29 +1,66 @@
 package at.eyu.basic.oop.whbsp;
 
 public class index {
-
     public static void main(String[] args) {
 
-        // Assuming you have a constructor in the car class
-        car c1 = new car(0.5, 60.0, 8.0); // Example values for tankstand, tankvolumen, and verbrauch
 
-        // Assuming you have methods like getBrand, getColor, getSerialnumber in the car class
-        c1.setBrand("hu");
-        c1.setColor("bhbh");
-        c1.setSerialnumber("1234");
+    Engine e1 =new Engine(140, Engine.TYPE.DIESEL);
+    System.out.println(e1.getHorsePower()+"Ps " + e1.getType());
 
-        System.out.println("Brand: " + c1.getBrand());
-        System.out.println("Color: " + c1.getColor());
-        System.out.println("Serial Number: " + c1.getSerialnumber());
 
-        /*
-        // Uncomment this section if you want to create and use a second car object
-        car c2 = new car("Mercedes", "blue", "02");
-        System.out.println(c2.getBrand());
-        System.out.println(c2.getColor());
-        c2.Turboboost();
-        c2.breakMethod();
-        c2.honk(3);
+/*       car c1 = new car();
+        c1.setBrand("BMW");
+        c1.setColor("Darkpurple");
+        c1.setFuelamount(200);
+        c1.setSerialnumber("BMW112");
+        System.out.println("Brand: "+ c1.getBrand() + ", Color: "+ c1.getColor()+ ", Fuelamount: "+ c1.getFuelamount());
+*/
+
+/*
+        car c2 = new car();
+        c2.fuelConsumption=5;
+        c2.brand="Dodge";
+        c2.serialnumber="D11";
+        c2.color="DeepPurple";
+        c2.fuelamount=60;
+        c2.MaxFuel= 140;
+        c2.amountOfRepetitions=2;
+        c2.fuelcomsumptionperkilometer=0.4;
+
+
+        System.out.println(c1.brand);
+        System.out.println(c1.fuelamount);
+        c1.drive();
+        System.out.println(c1.fuelamount);
+        c1.bremsen();
+        System.out.println(c1.turboBoost);
+        c1.turboBoost();
+        System.out.println(c1.honk);
+        c1.honk();
+        System.out.println(c1.getRemainingRange);
+        c1.getRemainingRange();
+
+        System.out.println('\n');
+
+        System.out.println(c2.brand);
+        System.out.println(c2.fuelamount);
+        c2.drive();
+        System.out.println(c2.fuelamount);
+        c2.bremsen();
+        System.out.println(c2.turboBoost);
+        c2.turboBoost();
+        System.out.println(c2.honk);
+        c2.honk();
+        System.out.println(c2.getRemainingRange);
+        c2.getRemainingRange();
         */
+
+
+
+        // car c3= new car(17, "Ford", "1234");
+
+
+
+
     }
 }

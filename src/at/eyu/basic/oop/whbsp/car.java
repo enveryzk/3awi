@@ -6,20 +6,29 @@ public class car {
     private String brand;
     private String serialnumber;
     private String color;
-
     private double tankstand;
     private double tankvolumen;
     private double verbrauch;
+    private String bremsen;
+    private String turboBoost;
+    private String honk;
+    private int amountOfRepetitions;
+    private double getRemainingRange;
+    private double fuelcomsumptionperkilometer;
+    private double engine;
 
     // Konstruktor dient dazu Objekte zu Initialisieren. Wird nur am Anfang einer Klasse aufgerufen.
-    public car(double tankstand, double tankvolumen, double verbrauch) {
-        this.tankstand = tankstand;
-        this.tankvolumen = tankvolumen;
-        this.verbrauch = verbrauch;
+    public car(Engine engine, String brand, String color){
+        this.engine= engine.getHorsePower();
+        this.brand=brand;
+        this.color=color;
+
+    }
+    public void drive(){
+        this.tankstand = this.tankstand-this.verbrauch;
+        System.out.println("I am driving");
     }
 
-    public car() {
-    }
 
     // Methoden zum Bremsen
     public void breakMethod() {
@@ -41,6 +50,11 @@ public class car {
         for (int i = 0; i < amountOfRepetitions; i++) {
             System.out.println("Tuuut");
         }
+    }
+
+    public void getRemainingRange(){
+        this.getRemainingRange = this.tankstand / this.fuelcomsumptionperkilometer;
+        System.out.println("Die Maximaldistanz betraegt:" + getRemainingRange);
     }
 
     public int getFuelComsumption() {
