@@ -1,4 +1,4 @@
-package at.eyu.basic.oop.bsp;
+package at.eyu.oop.bsp;
 
 public class Fahrrad {
     private int iMarke =0;

@@ -1,4 +1,4 @@
-package at.eyu.basic.oop.Fernbedienung;
+package at.eyu.oop.Fernbedienung;
 
 class Batterie {
     //Ladestatus der Batterie

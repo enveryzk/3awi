@@ -1,6 +1,4 @@
-package at.eyu.basic.oop.whbsp;
-
-import java.lang.reflect.Type;
+package at.eyu.oop.whbsp;
 
 public class Engine {
     enum TYPE {DIESEL, GAS}

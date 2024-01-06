@@ -1,4 +1,4 @@
-package at.eyu.basic.oop.whbsp;
+package at.eyu.oop.whbsp;
 
 public class index {
     public static void main(String[] args) {
