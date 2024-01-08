@@ -1,6 +1,6 @@
 package at.eyu.oop.Geometric;
 
-// Klasse für ein Quadrat, erbt von Quadrilateral
+// Klasse für ein Quadrat, erbt von Quadrat
 public class Square extends Quadrat {
     // Konstruktor für die Initialisierung von Name und Seitenlänge
     public Square(String name, double side) {
@@ -8,8 +8,8 @@ public class Square extends Quadrat {
     }
 
     // Implementierung der abstrakten Methode zur Berechnung des Flächeninhalts
-
+    @Override
     public double getArea() {
-        return side1 * side2;
+        return getSide1() * getSide2();
     }
 }

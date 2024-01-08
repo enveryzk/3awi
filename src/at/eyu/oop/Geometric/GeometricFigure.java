@@ -1,7 +1,7 @@
 package at.eyu.oop.Geometric;
 
-// Abstrakte Klasse, die als Basisklasse für geometrische Figuren dient
-public abstract class GeometricFigure {
+// Klasse, die als Basisklasse für geometrische Figuren dient
+public class GeometricFigure {
     // Gemeinsame Eigenschaft für alle geometrischen Figuren
     protected String name;
 
@@ -10,11 +10,18 @@ public abstract class GeometricFigure {
         this.name = name;
     }
 
-    // Abstrakte Methode für die Berechnung des Flächeninhalts
-    public abstract double getArea();
+    // Methode für die Berechnung des Flächeninhalts (kann konkrete Implementierung haben)
+    public double getArea() {
+        // Hier könnte auch eine konkrete Implementierung stehen, je nach Bedarf
+        return 0.0;
+    }
 
-    // Methode zum Abrufen des Namens der geometrischen Figur
+
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
